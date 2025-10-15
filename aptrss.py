@@ -27,7 +27,7 @@ SOFTWARE.
 import subprocess
 import xml.etree.ElementTree as ET
 from xml.dom.minidom import parseString
-from datetime import datetime
+from datetime import datetime, UTC
 import uuid
 
 # set a vew variables
@@ -36,7 +36,7 @@ url_pathname = ""  # optional. url subdirectory, default is index.xml
 file_path = ""  # optional. local file system, default is /var/www/html/index.html
 feed_name = ""  # optional. name of the feed, default is Apt Upgradeable Packages
 
-date_now = datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S GMT')
+date_now = datetime.now(UTC).strftime('%a, %d %b %Y %H:%M:%S GMT')
 
 # check and set variables as needed
 if not url_origin:

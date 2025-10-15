@@ -13,3 +13,5 @@ To configure, just set `url_origin` which is your full url, eg `https://www.myse
 Run regularly using cron.
 
 Enjoy!
+
+Note - python 3.12 is required due to the deprecation of `datetime.datetime.utcnow()`
